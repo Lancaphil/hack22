@@ -18,8 +18,11 @@
  }
  
  setcookie('user', $user['name'], time() + 3600, "/");
+ setcookie('login', $user['login'], time() + 3600, "/");
+ setcookie('id', $user['id'], time() + 3600, "/");
+ 
 
  $mysql->close();
  
- header('Location: /');
+ header('Location: /cabinet.php');
 ?>
