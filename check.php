@@ -17,9 +17,13 @@
 	 exit();
  }
  
+ $pass = md5 ($pass."asd123");
+ 
  $mysql = new mysqli('localhost', 'root', 'root', 'register-bg');
  $mysql->query("INSERT INTO `tablica` (`login`, `pass`, `name`) 
  VALUES('$login', '$pass', '$name')"); 
  
  $mysql->close();
+ 
+ header('Location: /');
 ?>
