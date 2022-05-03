@@ -6,11 +6,9 @@
  
 
 
-
-
  $pass = md5 ($pass."asd123");
  
- $mysql = new mysqli('localhost', 'root', 'root', 'register-bg');
+ require "blocks/connect.php";
 
  $result = $mysql->query("SELECT * FROM `tablica` WHERE `login` = '$login' AND `pass` = '$pass'");
  $user = $result->fetch_assoc();

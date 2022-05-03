@@ -19,7 +19,7 @@
  
  $pass = md5 ($pass."asd123");
  
- $mysql = new mysqli('localhost', 'root', 'root', 'register-bg');
+ require "blocks/connect.php";
  $mysql->query("INSERT INTO `tablica` (`login`, `pass`, `name`) 
  VALUES('$login', '$pass', '$name')"); 
  
