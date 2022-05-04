@@ -21,7 +21,7 @@
 <header>
 <a href="/index.php" title="На главную" id="logo">Выбирайка</a><span class="contact"><a href="about.html" title="Информация о нас">О нас</a></span><input type="text"
 class="field" placeholder="Давай помогу найти" /> 
-<span class="right"><span class="contact"><a href="reg.php" title="Зарегистрироваться">Регистрация</a></span><span class="contact"><a href="reg.php" title="Войти">Вход</a></span></span>
+<span class="right"><span class="contact"><a href="chat-plugin.php" title="Чат">Чат</a></span><span class="contact"><a href="reg.php" title="Зарегистрироваться">Регистрация</a></span><span class="contact"><a href="reg.php" title="Войти">Вход</a></span></span>
 </header>
  
  
@@ -29,7 +29,7 @@ class="field" placeholder="Давай помогу найти" />
 <header>
 <a href="/index.php" title="На главную" id="logo">Выбирайка</a><span class="contact"><a href="about.html" title="Информация о нас">О нас</a></span><input type="text"
 class="field" placeholder="Давай помогу найти" /> 
-<span class="right"><span class="contact"><a href="cabinet.php" title="В личный кабинет">Личный кабинет</a></span></span>
+<span class="right"><span class="contact"><a href="chat-plugin.php" title="Чат">Чат</a></span><span class="contact"><a href="cabinet.php" title="В личный кабинет">Личный кабинет</a></span></span>
 </header>
 <?php endif;?>
 
@@ -46,25 +46,25 @@ class="field" placeholder="Давай помогу найти" />
 			<img src="img/kur.jpg" alt="изображение" title="изображение" />
 			<h2>Заголовок</h2>
 			<p>Здесь находиться Вступительный текст</p>
-			<a href="/article" title="Посмотреть статью">Читать далее</a>
+			<a href="/article.html" title="Посмотреть статью">Читать далее</a>
 		</article>
 		<article>
 			<img src="img/zver.jpg" alt="изображение" title="изображение" />
 			<h2>Заголовок</h2>
 			<p>Здесь находиться Вступительный текст</p>
-			<a href="/article" title="Посмотреть статью">Читать далее</a>
+			<a href="/article2.html" title="Посмотреть статью">Читать далее</a>
 		</article>
 		<article>
 			<img src="img/war.jpg" alt="изображение" title="изображение" />
 			<h2>Заголовок</h2>
 			<p>Здесь находиться Вступительный текст</p>
-			<a href="/article" title="Посмотреть статью">Читать далее</a>
+			<a href="/article3.html" title="Посмотреть статью">Читать далее</a>
 		</article>
 		<article>
 			<img src="img/pes.jpg" alt="изображение" title="изображение" />
 			<h2>Заголовок</h2>
 			<p>Здесь находиться Вступительный текст</p>
-			<a href="/article" title="Посмотреть статью">Читать далее</a>
+			<a href="/article4.html" title="Посмотреть статью">Читать далее</a>
 		</article>
 	</div>
 </div>

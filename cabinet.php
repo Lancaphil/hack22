@@ -11,10 +11,26 @@
 
 <body>
 <div id="page-wrap">
+
+<?php
+	if(isset($_COOKIE['user']) == false):
+ ?>
+ <div class="row">
+
 <header>
 <a href="/index.php" title="На главную" id="logo">Выбирайка</a><span class="contact"><a href="about.html" title="Информация о нас">О нас</a></span><input type="text"
-class="field" placeholder="Давай помогу найти" />
+class="field" placeholder="Давай помогу найти" /> 
+<span class="right"><span class="contact"><a href="chat-plugin.php" title="Чат">Чат</a></span><span class="contact"><a href="reg.php" title="Зарегистрироваться">Регистрация</a></span><span class="contact"><a href="reg.php" title="Войти">Вход</a></span></span>
 </header>
+ 
+ 
+<?php else: ?>
+<header>
+<a href="/index.php" title="На главную" id="logo">Выбирайка</a><span class="contact"><a href="about.html" title="Информация о нас">О нас</a></span><input type="text"
+class="field" placeholder="Давай помогу найти" /> 
+<span class="right"><span class="contact"><a href="chat-plugin.php" title="Чат">Чат</a></span><span class="contact"><a href="cabinet.php" title="В личный кабинет">Личный кабинет</a></span></span>
+</header>
+<?php endif;?>
 
 <div class="clear"><br /></div>
 <center>
@@ -25,61 +41,11 @@ class="field" placeholder="Давай помогу найти" />
 <div>ID пользователя:  <?=$_COOKIE['id']?> </div>
 
 
-
-<div id="WebChatFormForm" ></div> 
-    <input type="text" id="WebChatNameID" value= <?=$_COOKIE['login']?> > <br>
-    <textarea id = "WebChatTextID" placeholder = "Отправьте сообщение в online чат..." ></textarea><br>
- 
-    <input type="button" onclick="web_send_msg();" value="Отправить" >
-    <div id="answer_div" ></div> <br>
- 
-  
-    <script>
-         // вырезает html теги
-         function strip(html)
-         {
-             var tmp = document.createElement("DIV");
-             tmp.innerHTML = html;
-             return tmp.textContent || tmp.innerText || "";
-         }
- 
-         // Отправляет сообщение в чат
-         function web_send_msg()
-         {
-             // Получение значений из элементов ввода.
-             var text = $("#WebChatTextID").val(); // Получаем текст сообщения
-             var name = $("#WebChatNameID").val(); // Получаем имя пользователя
- 
-             // Очистка поля с текстом сообщения
-             $("#WebChatTextID").val("");  
- 
-             // Добавление отправленного сообщения к списку сообщений.
-             $("#WebChatFormForm").append("<p><b>"+strip(name)+": </b>"+text+"</p>");
- 
-             // Отправка сообщения в канал чата
-             CometServer().web_pipe_send("web_chat_pipe", {"text":text, "name":name});
-         }
- 
- 
-         // Функция выполнится после загрузки страницы
-         $(document).ready(function()
-         {
-             CometServer().start({dev_id:1}) // Подключаемся к комет серверу
- 
-             // Подписываемся на канал в который и будут отправляться сообщения чата.
-             CometServer().subscription("web_chat_pipe", function(msg)
-             {
-                console.log(msg)
-                 // Добавление полученного сообщения к списку сообщений.
-                 $("#WebChatFormForm").append("<p><b>"+strip(msg.data.name)+": </b>"+msg.data.text+"</p>");
-             });
-         });
-    </script>
-
-
-
 </center>
+</div>
+	<footer>
+	<span class="left">Все права защищены &copy; 2022</span><span class="right">Соц. кнопки <img src="img/VK.png" alt="Группа Вконтакте" title="Группа Вконтакте" /></span>
+	</footer>
 	
 </body>
-
 </html>
