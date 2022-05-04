@@ -1,39 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE HTML>
 <head>
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
- <meta charset="UTF-8" >
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge" />
- <link href="css/style.css" rel="stylesheet" type="text/css" />
- <title>Личный кабинет</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
-
 <body>
-<div id="page-wrap">
-<header>
-<a href="/index.php" title="На главную" id="logo">Выбирайка</a><span class="contact"><a href="about.html" title="Информация о нас">О нас</a></span><input type="text"
-class="field" placeholder="Давай помогу найти" />
-</header>
-
-<div class="clear"><br /></div>
-<center>
-<div id="menu">Личный кабинет<hr /></div>
-<div>Привет <?=$_COOKIE['user']?>. Чтобы выйти нажмите <a href="/exit.php">здесь</a>.</div>
-<div>Login:  <?=$_COOKIE['login']?> </div>
-<div>Имя пользователя:  <?=$_COOKIE['user']?> </div>
-<div>ID пользователя:  <?=$_COOKIE['id']?> </div>
-
-
-
-<div id="WebChatFormForm" ></div> 
-    <input type="text" id="WebChatNameID" value= <?=$_COOKIE['login']?> > <br>
+    <div id="WebChatFormForm" ></div> 
+    <input type="text" id="WebChatNameID" placeholder="Укажите ваше имя..." > <br>
     <textarea id = "WebChatTextID" placeholder = "Отправьте сообщение в online чат..." ></textarea><br>
  
     <input type="button" onclick="web_send_msg();" value="Отправить" >
-    <div id="answer_div" ></div> <br>
+    <div id="answer_div" ></div>
  
-  
     <script>
          // вырезает html теги
          function strip(html)
@@ -75,11 +51,5 @@ class="field" placeholder="Давай помогу найти" />
              });
          });
     </script>
-
-
-
-</center>
-	
 </body>
-
 </html>

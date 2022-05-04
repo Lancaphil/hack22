@@ -4,7 +4,7 @@
 
 <head>
 	<title>Выбирайка - html</title>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 	<meta name="keywords" content="test, site, website" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -12,18 +12,19 @@
 
 
 <body>
-
+<div id="page-wrap">
 <?php
 	if(isset($_COOKIE['user']) == false):
  ?>
  <div class="row">
-<div id="page-wrap">
+
 <header>
 <a href="/index.php" title="На главную" id="logo">Выбирайка</a><span class="contact"><a href="about.html" title="Информация о нас">О нас</a></span><input type="text"
 class="field" placeholder="Давай помогу найти" /> 
 <span class="right"><span class="contact"><a href="reg.php" title="Зарегистрироваться">Регистрация</a></span><span class="contact"><a href="reg.php" title="Войти">Вход</a></span></span>
 </header>
-</div>
+ 
+ 
 <?php else: ?>
 <header>
 <a href="/index.php" title="На главную" id="logo">Выбирайка</a><span class="contact"><a href="about.html" title="Информация о нас">О нас</a></span><input type="text"
@@ -66,6 +67,8 @@ class="field" placeholder="Давай помогу найти" />
 			<a href="/article" title="Посмотреть статью">Читать далее</a>
 		</article>
 	</div>
+</div>
+</div>
 </div>
 	<footer>
 	<span class="left">Все права защищены &copy; 2022</span><span class="right">Соц. кнопки <img src="img/VK.png" alt="Группа Вконтакте" title="Группа Вконтакте" /></span>
